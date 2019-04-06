@@ -4,8 +4,8 @@
 
 ## Models
 - Post -> date: date rationale:text
-- User -> Devise
-- Administrator -> STI
+x User -> Devise
+x Administrator -> STI
 
 ## Features:
 - Approval workflow
