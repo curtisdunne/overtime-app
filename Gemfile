@@ -20,7 +20,7 @@ group :development, :test do
   gem 'database_cleaner'
 end
 
-group :development do 
+group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
@@ -28,3 +28,6 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'devise', '~> 4.6.2'
+gem 'hirb'
