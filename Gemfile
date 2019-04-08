@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.0'
 
 gem 'rails', '~> 5.2.3'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -31,3 +33,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.6.2'
 gem 'hirb'
+gem 'bootstrap-sass', '~> 3.4.1'
