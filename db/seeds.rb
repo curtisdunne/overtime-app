@@ -9,8 +9,11 @@
 @user = User.create(email: "curtdunne@gmail.com", first_name: "Curtis", last_name: "Dunne", password: "password", password_confirmation: "password")
 puts "1 User created"
 
+AdminUser.create(email: "admin@example.com", password: "password", password_confirmation: "password", first_name: "Admin", last_name: "User")
+puts "1 Admin User created"
+
 100.times do |post|
-  Post.create(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id)
+  Post.create(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id, status: :submitted)
 end
 
 puts "100 Posts have been created"
