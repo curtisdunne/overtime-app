@@ -11,6 +11,7 @@
 - Approval workflow
 - SMS Sending -> link to approval or overtime input
 - Administrate admin dashboard
+- Block non-admin and guest users
 - Email summary to managers for Approval
 - Needs to be documented if employee did not log overtime
 
