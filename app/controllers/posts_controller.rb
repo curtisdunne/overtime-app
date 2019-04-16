@@ -25,20 +25,22 @@ class PostsController < ApplicationController
   end
 
   def edit
-
-  end
-
-  def destroy
-    @post.delete
-    redirect_to posts_path, notice: 'Your post was deleted successfully'
+    authorize @post
   end
 
   def update
+    authorize @post
+
     if @post.update(post_params)
       redirect_to @post, notice: 'Your post was updated successfully'
     else
       render :edit
     end
+  end
+
+  def destroy
+    @post.delete
+    redirect_to posts_path, notice: 'Your post was deleted successfully'
   end
 
   private
