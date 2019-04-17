@@ -13,7 +13,7 @@ AdminUser.create(email: "admin@example.com", password: "password", password_conf
 puts "1 Admin User created"
 
 100.times do |post|
-  Post.create(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id, status: :submitted)
+  Post.create(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id, status: 0)
 end
 
 puts "100 Posts have been created"
