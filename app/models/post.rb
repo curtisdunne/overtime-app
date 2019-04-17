@@ -5,4 +5,12 @@ class Post < ApplicationRecord
 
   scope :posts_by, ->(user) { where(user_id: user.id) }
   scope :posts_by_starting_at, ->(user, index) { where(["user_id = ? and id > ?", user, index]) }
+
+  after_initialize :set_defaults
+
+  private
+
+  def set_defaults
+    self.status = 'submitted' if self.new_record?
+  end
 end
