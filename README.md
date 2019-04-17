@@ -21,7 +21,7 @@
 - x Update the styles for forms
 
 ## Refactor TODOS:
-- Refactor user association integration test in post_spec
+- x Refactor user association integration test in post_spec
 - Refactor posts/form for admin user with status
-- fix post_spec to use factories
-- fix post_spec to have correct user reference and not require update 
+- x fix post_spec to use factories
+- x fix post_spec to have correct user reference and not require update
