@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   belongs_to :user, optional: true
   validates_presence_of :date, :rationale
 
+  validates :overtime_request, numericality: { greater_than: 0.0 }
+
   scope :posts_by, ->(user) { where(user_id: user.id) }
   scope :posts_by_starting_at, ->(user, index) { where(["user_id = ? and id > ?", user, index]) }
 
