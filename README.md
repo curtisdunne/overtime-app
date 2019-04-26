@@ -22,8 +22,4 @@
 - x Update the styles for forms
 
 ## TODOS:
-- integrate validation for phone attr in User:
-  - no spaces or dashes
-  - exactly 10 characters
-  - all characters must be a number
   
