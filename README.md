@@ -6,7 +6,7 @@
 - x Post -> date: date rationale:text
 - x User -> Devise
 - x Administrator -> STI
-- AuditLog 
+- AuditLog
 
 ## Features:
 - Approval workflow
@@ -21,8 +21,9 @@
 - x Icons from glyphicon
 - x Update the styles for forms
 
-## Refactor TODOS:
-- x Refactor user association integration test in post_spec
-- x Refactor posts/form for admin user with status
-- x fix post_spec to use factories
-- x fix post_spec to have correct user reference and not require update
+## TODOS:
+- integrate validation for phone attr in User:
+  - no spaces or dashes
+  - exactly 10 characters
+  - all characters must be a number
+  
