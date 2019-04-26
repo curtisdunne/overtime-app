@@ -6,12 +6,6 @@ namespace :notification do
     # 3. Skip Admin type include_chain_clauses_in_custom_matcher_descriptions
     # 4. Send a message that has instructions and a link to log time
 
-    # number: "555-555-5555"
-    # number: "5555555555"
-    # must all be numbers
-    # no dashes or spaces
-
-
     # User.all.each do |user|
     #   SmsTool.send_sms()
     # end
