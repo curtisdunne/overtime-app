@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.posts_by current_user
+    @posts = Post.posts_by(current_user).page(params[:page]).per(20)
     # @posts = Post.posts_by_starting_at(current_user, 80)
   end
 
