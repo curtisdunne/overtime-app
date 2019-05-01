@@ -1,4 +1,4 @@
-@employee = Employee.create(email: "curtdunne@gmail.com",
+@employee = Employee.create!(email: "curtdunne@gmail.com",
                     first_name: "Curtis",
                     last_name: "Dunne",
                     password: "password",
@@ -6,7 +6,7 @@
                     phone: "7606958071")
 puts "1 User created"
 
-AdminUser.create(email: "admin@example.com",
+AdminUser.create!(email: "admin@example.com",
                  password: "password",
                  password_confirmation: "password",
                  first_name: "Admin",
