@@ -6,14 +6,15 @@ namespace :notification do
     # 3. Skip Admin type include_chain_clauses_in_custom_matcher_descriptions
     # 4. Send a message that has instructions and a link to log time
 
-    if Time.now.sunday?
+    # if Time.now.sunday?
       employees = Employee.all
       notification_message = "Please log into the Overtime Management Dashboard to request overtime or confirm your hours for last week: https://neutrino-overtime.herokuapp.com"
 
       employees.each do |employee|
+        AuditLog.create!(user_id: employee.id)
         SmsTool.send_sms(number: employee.phone, message: notification_message)
       end
-    end
+    # end
   end
 
 # NOTE: Mailer not setup due to no free account being available
