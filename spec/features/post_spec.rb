@@ -24,13 +24,16 @@ describe 'navigate' do
     end
 
     it 'has a list of posts' do
-      # post1 = FactoryGirl.create(:post)
-      # post2 = FactoryGirl.create(:second_post)
-      post1 = Post.create(date: Date.today, work_performed: "work_performed test", user_id: user.id, daily_hours: 3.5)
-      post2 = Post.create(date: Date.today, work_performed: "test work_performed", user_id: user.id, daily_hours: 3.5)
+      post1 = FactoryGirl.create(:post)
+      post2 = FactoryGirl.create(:second_post)
+      post2.update!(user_id: user.id)
+      # post1 = Post.create(date: Date.today, work_performed: "work_performed test", user_id: user.id, daily_hours: 3.5)
+      # post2 = Post.create(date: Date.today, work_performed: "test work_performed", user_id: user.id, daily_hours: 3.5)
 
       visit posts_path(user.id)
-      expect(page).to have_content(/test work_performed|content/)
+      # expect(page).to have_content(/test work_performed|content/)
+      expect(page).to have_text(post1.work_performed)
+      expect(page).to have_text(post2.work_performed)
     end
 
     it 'has a scope so that only post creators can see their posts' do
