@@ -8,7 +8,7 @@ namespace :notification do
 
     # if Time.now.sunday?
       employees = Employee.all
-      notification_message = "Please log into the Overtime Management Dashboard to request overtime or confirm your hours for last week: https://neutrino-overtime.herokuapp.com"
+      notification_message = "Please log into the Hours Management Dashboard to enter daily hours worked: https://neutrino-overtime.herokuapp.com"
 
       employees.each do |employee|
         AuditLog.create!(user_id: employee.id)
